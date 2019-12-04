@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1B9457239854880061A486 /* MeplesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1B9456239854880061A486 /* MeplesList.swift */; };
 		7D6209EF2396F81600F589AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6209EE2396F81600F589AA /* AppDelegate.swift */; };
 		7D6209F12396F81600F589AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6209F02396F81600F589AA /* SceneDelegate.swift */; };
 		7D6209F42396F81600F589AA /* MeplesShuffler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D6209F22396F81600F589AA /* MeplesShuffler.xcdatamodeld */; };
@@ -14,9 +15,12 @@
 		7D6209F82396F81800F589AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6209F72396F81800F589AA /* Assets.xcassets */; };
 		7D6209FB2396F81800F589AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6209FA2396F81800F589AA /* Preview Assets.xcassets */; };
 		7D6209FE2396F81800F589AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6209FC2396F81800F589AA /* LaunchScreen.storyboard */; };
+		7D620A062396F89B00F589AA /* Meple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D620A052396F89B00F589AA /* Meple.swift */; };
+		7D620A0A239716A700F589AA /* NumberOfPlayersSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D620A09239716A700F589AA /* NumberOfPlayersSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D1B9456239854880061A486 /* MeplesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeplesList.swift; sourceTree = "<group>"; };
 		7D6209EB2396F81600F589AA /* MeplesShuffler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeplesShuffler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D6209EE2396F81600F589AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D6209F02396F81600F589AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		7D6209FA2396F81800F589AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D6209FD2396F81800F589AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D6209FF2396F81800F589AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D620A052396F89B00F589AA /* Meple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meple.swift; sourceTree = "<group>"; };
+		7D620A09239716A700F589AA /* NumberOfPlayersSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPlayersSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		7D6209ED2396F81600F589AA /* MeplesShuffler */ = {
 			isa = PBXGroup;
 			children = (
+				7D620A082397165300F589AA /* Screens */,
+				7D620A072397163C00F589AA /* Models */,
 				7D6209EE2396F81600F589AA /* AppDelegate.swift */,
 				7D6209F02396F81600F589AA /* SceneDelegate.swift */,
 				7D6209F52396F81600F589AA /* ContentView.swift */,
@@ -76,6 +84,23 @@
 				7D6209FA2396F81800F589AA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D620A072397163C00F589AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D620A052396F89B00F589AA /* Meple.swift */,
+				7D1B9456239854880061A486 /* MeplesList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D620A082397165300F589AA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				7D620A09239716A700F589AA /* NumberOfPlayersSelection.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D620A062396F89B00F589AA /* Meple.swift in Sources */,
 				7D6209F42396F81600F589AA /* MeplesShuffler.xcdatamodeld in Sources */,
 				7D6209EF2396F81600F589AA /* AppDelegate.swift in Sources */,
+				7D620A0A239716A700F589AA /* NumberOfPlayersSelection.swift in Sources */,
+				7D1B9457239854880061A486 /* MeplesList.swift in Sources */,
 				7D6209F62396F81600F589AA /* ContentView.swift in Sources */,
 				7D6209F12396F81600F589AA /* SceneDelegate.swift in Sources */,
 			);
