@@ -8,43 +8,18 @@
 
 import SwiftUI
 
-struct MultiSelectRow: View{
-    var meple: Meple
-    @EnvironmentObject var meplesList: MeplesList
-    
-    var isSelected: Bool {
-        return !meplesList.selectedList.filter{$0.id == self.meple.id}.isEmpty
-    }
-    var body: some View{
-        HStack{
-            Text(meple.name)
-            Spacer()
-            if self.isSelected{
-                Image(systemName: "checkmark")
-                    .foregroundColor(.blue)
-            }
-        }
-        .onTapGesture {
-            print("click")
-            if self.isSelected{
-                self.meplesList.selectedList = self.meplesList.selectedList.filter{
-                    $0.id != self.meple.id
-                }
-            } else{
-                self.meplesList.selectedList.append(self.meple)
-            }
-        }
-    }
-}
-
 struct NumberOfPlayersSelection: View {
     @EnvironmentObject var meplesList: MeplesList
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         NavigationView{
             List(self.meplesList.baseList){meple in
                 MultiSelectRow(meple: meple)
             }
-            .navigationBarTitle("Selected \(self.meplesList.countSelectedList())")
+            .navigationBarTitle("Players \(self.meplesList.countSelectedList())", displayMode: .inline)
+            .navigationBarItems(trailing: Button("Done"){
+                self.presentationMode.wrappedValue.dismiss()
+                })
         }
     }
 }

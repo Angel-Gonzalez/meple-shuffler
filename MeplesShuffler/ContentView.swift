@@ -15,15 +15,12 @@ struct ContentView: View {
         NavigationView{
             VStack{
                 List(meplesList.selectedList){meple in
-                    Text(meple.name)
+                    MepleRow(meple: meple)
                 }
-                Button(action:{
-                    self.playerSelectorIsShown.toggle()
-                }){
-                    Text("Select Players")
+                Button("Select Players"){
+                        self.playerSelectorIsShown.toggle()
                 }
-                .padding(20)
-                .foregroundColor(.blue)
+                .padding()
                 .sheet(isPresented: self.$playerSelectorIsShown){ NumberOfPlayersSelection().environmentObject(self.meplesList)
                     }
                 Button("Shuffle"){
