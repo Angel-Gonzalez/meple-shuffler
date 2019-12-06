@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     @EnvironmentObject var meplesList: MeplesList
@@ -17,18 +18,21 @@ struct ContentView: View {
                 List(meplesList.selectedList){meple in
                     MepleRow(meple: meple)
                 }
-                Button("Select Players"){
-                        self.playerSelectorIsShown.toggle()
-                }
-                .padding()
-                .sheet(isPresented: self.$playerSelectorIsShown){ NumberOfPlayersSelection().environmentObject(self.meplesList)
-                    }
+                
                 Button("Shuffle"){
                     self.shuffle()
                 }
                 .padding(20)
             }
             .navigationBarTitle(Text("MeplesShuffler"), displayMode: .inline)
+            .navigationBarItems(trailing: Button(action:{
+                self.playerSelectorIsShown.toggle()
+            }){
+                Image(systemName: "person.3.fill")
+            }
+            .padding()
+            .sheet(isPresented: self.$playerSelectorIsShown){ NumberOfPlayersSelection().environmentObject(self.meplesList)
+            })
         }
     }
     func shuffle(){

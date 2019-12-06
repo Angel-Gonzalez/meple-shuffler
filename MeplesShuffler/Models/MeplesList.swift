@@ -10,11 +10,14 @@ import SwiftUI
 
 class MeplesList: ObservableObject {
     @Published var baseList = [
-        Meple(color: Color(red:255,green:0,blue:0), name: "red"),
-        Meple(color: Color(red:0,green:255,blue:0), name: "green"),
-        Meple(color: Color(red:0,green:0,blue:255), name: "blue"),
-        Meple(color: Color(red:0,green:0,blue:0), name: "black"),
-        Meple(color: Color(red:255,green:255,blue:255), name: "white")
+        Meple(color: .red,name: "red"),
+        Meple(color: .green, name: "green"),
+        Meple(color: .blue, name: "blue"),
+        Meple(color: .orange, name: "orange"),
+        Meple(color: .gray, name: "gray"),
+        Meple(color: .purple, name: "purple"),
+        Meple(color: .pink, name: "pink"),
+        Meple(color: .yellow , name: "yellow")
     ]
     
     @Published var selectedList = [Meple]()

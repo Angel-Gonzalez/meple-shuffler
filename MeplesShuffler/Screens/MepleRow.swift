@@ -9,30 +9,32 @@
 import SwiftUI
 
 struct MepleRow: View {
-     var meple: Meple
-       @EnvironmentObject var meplesList: MeplesList
-       
-       var isSelected: Bool {
-           return !meplesList.selectedList.filter{$0.id == self.meple.id}.isEmpty
-       }
+    var meple: Meple
+    @EnvironmentObject var meplesList: MeplesList
+    
+    var isSelected: Bool {
+        return !meplesList.selectedList.filter{$0.id == self.meple.id}.isEmpty
+    }
     var gradient: LinearGradient{
         LinearGradient(
-        gradient: Gradient(colors: [self.meple.color, self.meple.color.opacity(0.3)]),
-        startPoint: .leading, endPoint: .trailing)
+            gradient: Gradient(colors: [self.meple.color, self.meple.color.opacity(0.8)]),
+            startPoint: .leading, endPoint: .trailing)
     }
-       var body: some View{
+    var body: some View{
         ZStack{
             Rectangle().fill(gradient).cornerRadius(20)
             HStack{
-                    Spacer()
-                    Text(meple.name)
-                        .bold()
-                   }
-                    .padding()
-                    .cornerRadius(20)
+                Text(meple.name)
+                    .bold()
+                    .foregroundColor(.white)
+                Spacer()
             }
+            .padding()
+            .cornerRadius(20)
+            
         }
-           
+    }
+    
 }
 struct MepleRow_Previews: PreviewProvider {
     static let meplesList = MeplesList()

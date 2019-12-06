@@ -9,32 +9,40 @@
 import SwiftUI
 
 struct MultiSelectRow: View {
-   var meple: Meple
+    var meple: Meple
     @EnvironmentObject var meplesList: MeplesList
     
     var isSelected: Bool {
         return !meplesList.selectedList.filter{$0.id == self.meple.id}.isEmpty
     }
+    var gradient: LinearGradient{
+        LinearGradient(
+            gradient: Gradient(colors: [self.meple.color, self.meple.color.opacity(0.9)]),
+            startPoint: .leading, endPoint: .trailing)
+    }
     var body: some View{
-        HStack{
-            Text(meple.name)
-                .bold()
-            Spacer()
-            if self.isSelected{
-                Image(systemName: "checkmark")
-                    .foregroundColor(.blue)
-            }
-        }
-        .padding()
-        .overlay(Capsule()
-        .stroke(self.meple.color, lineWidth: 3))
-        .onTapGesture {
-            if self.isSelected{
-                self.meplesList.selectedList = self.meplesList.selectedList.filter{
-                    $0.id != self.meple.id
+        ZStack{
+            Rectangle().fill(gradient).cornerRadius(20)
+            HStack{
+                Text(meple.name)
+                    .bold()
+                    .foregroundColor(.white)
+                Spacer()
+                if self.isSelected{
+                    Image(systemName: "checkmark")
+                        .foregroundColor(.white)
                 }
-            } else{
-                self.meplesList.selectedList.append(self.meple)
+            }
+            .padding()
+            .cornerRadius(20)
+            .onTapGesture {
+                if self.isSelected{
+                    self.meplesList.selectedList = self.meplesList.selectedList.filter{
+                        $0.id != self.meple.id
+                    }
+                } else{
+                    self.meplesList.selectedList.append(self.meple)
+                }
             }
         }
     }

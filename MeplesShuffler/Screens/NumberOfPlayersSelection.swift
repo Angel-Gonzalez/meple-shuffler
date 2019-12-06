@@ -19,7 +19,7 @@ struct NumberOfPlayersSelection: View {
             .navigationBarTitle("Players \(self.meplesList.countSelectedList())", displayMode: .inline)
             .navigationBarItems(trailing: Button("Done"){
                 self.presentationMode.wrappedValue.dismiss()
-                })
+            })
         }
     }
 }
