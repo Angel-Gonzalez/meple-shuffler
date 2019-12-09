@@ -21,8 +21,16 @@ struct MultiSelectRow: View {
             startPoint: .leading, endPoint: .trailing)
     }
     var body: some View{
-        ZStack{
-            Rectangle().fill(gradient).cornerRadius(20)
+        Button(action:{
+            if self.isSelected{
+                self.meplesList.selectedList = self.meplesList.selectedList.filter{
+                    $0.id != self.meple.id
+                }
+            } else{
+                self.meplesList.selectedList.append(self.meple)
+            }
+        })
+        {
             HStack{
                 Text(meple.name)
                     .bold()
@@ -35,15 +43,7 @@ struct MultiSelectRow: View {
             }
             .padding()
             .cornerRadius(20)
-            .onTapGesture {
-                if self.isSelected{
-                    self.meplesList.selectedList = self.meplesList.selectedList.filter{
-                        $0.id != self.meple.id
-                    }
-                } else{
-                    self.meplesList.selectedList.append(self.meple)
-                }
-            }
+            .background(Rectangle().fill(gradient).cornerRadius(20))
         }
     }
 }

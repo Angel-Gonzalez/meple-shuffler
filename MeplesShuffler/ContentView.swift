@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct ContentView: View {
     @EnvironmentObject var meplesList: MeplesList
@@ -19,12 +18,17 @@ struct ContentView: View {
                     MepleRow(meple: meple)
                 }
                 
-                Button("Shuffle"){
+                Button(action:{
                     self.shuffle()
+                }){
+                    HStack{
+                        Image(systemName: "shuffle")
+                        Text("shuffleButton")
+                    }
                 }
                 .padding(20)
             }
-            .navigationBarTitle(Text("MeplesShuffler"), displayMode: .inline)
+            .navigationBarTitle(Text("appName"), displayMode: .inline)
             .navigationBarItems(trailing: Button(action:{
                 self.playerSelectorIsShown.toggle()
             }){

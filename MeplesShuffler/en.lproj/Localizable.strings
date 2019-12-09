@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  MeplesShuffler
+
+  Created by Angel Esteban González Fuentes on 07/12/2019.
+  Copyright © 2019 Angel Gonzalez Fuentes. All rights reserved.
+*/
+"appName"="MepleShuffler";
+"shuffleButton"="Shuffle";

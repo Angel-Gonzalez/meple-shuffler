@@ -21,18 +21,15 @@ struct MepleRow: View {
             startPoint: .leading, endPoint: .trailing)
     }
     var body: some View{
-        ZStack{
-            Rectangle().fill(gradient).cornerRadius(20)
-            HStack{
-                Text(meple.name)
-                    .bold()
-                    .foregroundColor(.white)
-                Spacer()
-            }
-            .padding()
-            .cornerRadius(20)
-            
+        HStack{
+            Text(meple.name)
+                .bold()
+                .foregroundColor(.white)
+            Spacer()
         }
+        .padding()
+        .background(Rectangle().fill(gradient).cornerRadius(20))
+        .cornerRadius(20)
     }
     
 }
