@@ -7,3 +7,5 @@
 */
 "appName"="MepleShuffler";
 "shuffleButton"="Shuffle";
+"mepleNavigationButton"="Meple";
+"dicesNavigationButton"="Dices";

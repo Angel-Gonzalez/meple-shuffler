@@ -20,6 +20,8 @@
 		7D6209FE2396F81800F589AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6209FC2396F81800F589AA /* LaunchScreen.storyboard */; };
 		7D620A062396F89B00F589AA /* Meple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D620A052396F89B00F589AA /* Meple.swift */; };
 		7D620A0A239716A700F589AA /* NumberOfPlayersSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D620A09239716A700F589AA /* NumberOfPlayersSelection.swift */; };
+		7D720B3D23A179B0008D67BD /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D720B3C23A179B0008D67BD /* Dice.swift */; };
+		7D720B3F23A17A83008D67BD /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D720B3E23A17A83008D67BD /* DiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		7D6209FF2396F81800F589AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D620A052396F89B00F589AA /* Meple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meple.swift; sourceTree = "<group>"; };
 		7D620A09239716A700F589AA /* NumberOfPlayersSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPlayersSelection.swift; sourceTree = "<group>"; };
+		7D720B3C23A179B0008D67BD /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		7D720B3E23A17A83008D67BD /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				7D620A052396F89B00F589AA /* Meple.swift */,
 				7D1B9456239854880061A486 /* MeplesList.swift */,
+				7D720B3C23A179B0008D67BD /* Dice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 				7D620A09239716A700F589AA /* NumberOfPlayersSelection.swift */,
 				7D1B945A2399AD430061A486 /* MultiSelectRow.swift */,
 				7D1B945C2399B8460061A486 /* MepleRow.swift */,
+				7D720B3E23A17A83008D67BD /* DiceView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -188,8 +194,10 @@
 			files = (
 				7D620A062396F89B00F589AA /* Meple.swift in Sources */,
 				7D6209F42396F81600F589AA /* MeplesShuffler.xcdatamodeld in Sources */,
+				7D720B3D23A179B0008D67BD /* Dice.swift in Sources */,
 				7D1B945B2399AD430061A486 /* MultiSelectRow.swift in Sources */,
 				7D6209EF2396F81600F589AA /* AppDelegate.swift in Sources */,
+				7D720B3F23A17A83008D67BD /* DiceView.swift in Sources */,
 				7D620A0A239716A700F589AA /* NumberOfPlayersSelection.swift in Sources */,
 				7D1B9457239854880061A486 /* MeplesList.swift in Sources */,
 				7D6209F62396F81600F589AA /* ContentView.swift in Sources */,
@@ -353,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelgonzalezfuentes.MeplesShuffler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -373,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelgonzalezfuentes.MeplesShuffler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
