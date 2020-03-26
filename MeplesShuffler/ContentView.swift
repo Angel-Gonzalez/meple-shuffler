@@ -42,7 +42,7 @@ struct ContentView: View {
                 .tabItem({
                     Image(systemName: "person")
                     Text("mepleNavigationButton")
-                })
+                    })
                 DiceView()
                     .tabItem({
                         Image(systemName: "hexagon")

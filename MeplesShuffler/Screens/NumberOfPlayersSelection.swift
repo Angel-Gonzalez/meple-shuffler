@@ -11,13 +11,14 @@ import SwiftUI
 struct NumberOfPlayersSelection: View {
     @EnvironmentObject var meplesList: MeplesList
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    let playersTitle = NSLocalizedString("playersCount", comment: "players")
     var body: some View {
         NavigationView{
             List(self.meplesList.baseList){meple in
                 MultiSelectRow(meple: meple)
             }
-            .navigationBarTitle("Players \(self.meplesList.countSelectedList())", displayMode: .inline)
-            .navigationBarItems(trailing: Button("Done"){
+            .navigationBarTitle("\(self.playersTitle)  \(self.meplesList.countSelectedList())", displayMode: .inline)
+            .navigationBarItems(trailing: Button("DoneButton"){
                 self.presentationMode.wrappedValue.dismiss()
             })
         }

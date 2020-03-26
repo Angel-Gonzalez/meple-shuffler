@@ -22,10 +22,12 @@ struct MepleRow: View {
     }
     var body: some View{
         HStack{
-            Text(meple.name)
+            Image("white-mepple").resizable()
+            .frame(width: 40, height: 40)
+            Spacer()
+            Text("\(meple.score)")
                 .bold()
                 .foregroundColor(.white)
-            Spacer()
         }
         .padding()
         .background(Rectangle().fill(gradient).cornerRadius(20))

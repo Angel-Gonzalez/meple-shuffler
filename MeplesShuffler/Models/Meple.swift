@@ -12,4 +12,5 @@ struct Meple: Identifiable, Hashable {
     let id: UUID = UUID()
     let color: Color
     let name: String
+    var score: Int = 0
 }
